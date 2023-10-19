@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>App de Notas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body.dark {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-azul {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .btn-azul:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-azul:focus {
+            outline: 2px solid #fff;
+        }
+
+        .dark textarea {
+                color: #000; 
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center h-screen dark"> <!-- Agregar la clase "dark" aquí -->
+    <div class="w-1/2 mx-auto my-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-blue-300 underline">App de Notas con Local Storage</h1>
+        </div>
+        <div class="flex justify-end mb-4">
+            <button id="modoOscuroBtn" class="btn-azul text-white px-4 py-2 rounded-lg mr-4">Modo Oscuro</button>
+        </div>
+        <div class="flex flex-row space-x-4">
+            <div class="w-1/2 mx-auto my-auto">
+                <form id="formulario" class="bg-lime-500 p-4">
+                    <label for "tweet" class="text-3xl text-blue-500 font-bold">Agrega una nota</label>
+                    <textarea id="tweet" class="w-full h-32 resize-none bg-blue-200 p-2 rounded-md mt-2"></textarea>
+                    <div id="mensaje-error" class="text-red-500 text-base mt-1 font-bold"></div>
+                    <button type="submit" class="btn-azul text-white px-4 py-2 mt-4 rounded-lg">Agregar</button>
+                </form>
+            </div>
+            <div class="w-1/2 mx-auto my-auto">
+                <h1 class="text-3xl text-blue-500 font-bold mb-8 underline">Mis notas</h1>
+                <div id="lista-tweets"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
